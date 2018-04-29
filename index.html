@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>I'll shoot the lights out</title>
+    <style>
+      body {
+        background-color: #001111;
+      }
+      #ill-shoot-the-lights-out {
+        height: 30px;
+        width: 100%;
+        font-size: 30px;
+        color: rgb(255, 68, 112);
+        font-family: sans-serif;
+        letter-spacing: 0.15em;
+        margin: 0 auto;
+        position: fixed;
+        top: 50%;
+        margin-top: -15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ill-shoot-the-lights-out"></div>
+    <script>
+      var el = document.getElementById("ill-shoot-the-lights-out");
+      (function loop() {
+        var text = 1529228700000 - new Date();
+        el.innerHTML = text;
+        requestAnimationFrame(loop);
+      }());
+    </script>
+  </body>
+</html>
